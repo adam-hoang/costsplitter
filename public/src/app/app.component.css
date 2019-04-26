@@ -1,0 +1,40 @@
+.container {
+    width: 400px;
+    background-color: lightgrey;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    /* background-image: url("src/assets/images/teahouse3.png"); */
+    /* background-image: url("src/assets/images/watercolor35.png"); */
+}
+@font-face { font-family: Brushot-Bold; src: url('src/Brushot-Bold.ttf'); } 
+
+h1 {
+    font-family: Brushot-Bold;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+h2 {
+    font-family: Brushot-Bold;
+}
+button {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 130px;
+    border-radius: 5px;
+}
+button:hover {
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer; 
+}
+/* img {
+    width:350px;
+} */
+.teal {
+    color:teal;
+}

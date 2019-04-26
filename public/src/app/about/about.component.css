@@ -1,0 +1,21 @@
+.container {
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+ul {
+    list-style-position: inside;
+    text-align: left;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+li {
+    margin-bottom: 10px;
+}
+h3 {
+    text-decoration: underline;
+}
+.inside {
+    display: inline-block;
+}

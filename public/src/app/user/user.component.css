@@ -1,0 +1,40 @@
+table {
+    margin:auto;
+}
+td {
+    width: 150px;
+}
+.editBtn {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 70px;
+    border-radius: 5px;
+}
+.showbutton, .hidebutton {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 80px;
+    border-radius: 5px;
+}
+.hidebutton {
+    margin-top: 10px;
+}
+.container {
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+button:hover {
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer; 
+}

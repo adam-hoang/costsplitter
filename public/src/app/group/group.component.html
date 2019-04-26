@@ -1,0 +1,67 @@
+<h1>{{group.gname}}</h1>
+
+<p>Total Cost: ${{groupTotal}}</p>
+<button (click)="showEdit()">Edit</button>
+<button (click)="deleteGroup()">Delete</button>
+<button [routerLink]="['/group/', group._id, 'journal']">Journal</button>
+
+<!-- LIST OF EVENTS IN GROUP -->
+<div class='container'>
+  <table>
+    <thead>
+      <th>Events</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let x of group.events">       
+        <td><p class="hover" [routerLink]="['/group/', group._id, 'event', x._id]">{{x.title}}</p></td>
+        <td>${{x.total}}</td>
+        <td>
+          <button [routerLink]="['/group/', group._id, 'event', x._id]">Show</button>
+          <button (click)="deleteEvent(x)">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button *ngIf="group.users.length > 0" class="addbutton" (click)="showAddEventForm()">Add Event</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <p *ngIf="userA.length > 1"><b>Suggested Next Payer: </b>{{suggestedPayer.name}}</p>
+</div>
+
+<!-- LIST OF USERS IN GROUP -->
+<div class='container'>
+  <table>
+    <thead>
+      <th>Users</th>
+      <th>Balance</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of userA">
+        <td><p class="hover" [routerLink]="['/group/', group._id, 'user', x._id]">{{x.name}}</p></td>
+        <td *ngIf="x.bal < 0" class="red">-${{x.bal*-1}}</td>
+        <td *ngIf="x.bal >= 0" class="green">+${{x.bal}}</td>
+        <td>
+          <button [routerLink]="['/group/', group._id, 'user', x._id]">Show</button>
+          <button (click)="deleteUser(x)">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="addbutton" (click)="showAddUserForm()">Add User</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

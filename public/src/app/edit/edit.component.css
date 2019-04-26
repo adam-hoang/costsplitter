@@ -1,0 +1,31 @@
+.error {
+    color: red;
+}
+.container {
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+button {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+.editbutton {
+    margin-left: 5px;
+}
+.buttons{
+    display: block;
+}
+input, p {
+    display: inline-block;
+}
+button:hover {
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer; 
+}

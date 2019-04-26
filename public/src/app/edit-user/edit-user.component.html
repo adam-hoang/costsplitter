@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Edit User</h3>
+  <p *ngIf="userError" class="error">{{userError}}</p>
+  <form>
+    <p>Name: &nbsp;&nbsp; <input placeholder="Name" type="text" name="user.name" [(ngModel)]="user.name"></p>
+    <div class="buttons">
+      <button type="button" (click)="hideEditUser()">Cancel</button>
+      <button class="editbutton" (click)="editUser()">Edit</button>
+    </div>
+  </form>
+</div>

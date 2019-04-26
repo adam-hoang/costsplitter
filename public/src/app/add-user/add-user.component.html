@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Add User</h3>
+  <p *ngIf="errors.name" class="error">{{errors.name.message}}</p>
+  <form>
+    <p>Name: &nbsp;&nbsp; <input class="addUser" placeholder="Name" type="text" name="userModel.name" [(ngModel)]="userModel.name"></p>
+    <div class="buttons">
+      <button type="button" (click)="cancelAddUser()">Cancel</button>
+      <button class="addbutton" (click)="addUser()">Add</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Add Group</h3>
+  <p *ngIf="errors.gname" class="error">{{errors.gname.message}}</p>
+  <form>
+    <p>Name: &nbsp;&nbsp;<input placeholder="Group Name" type="text" name="groupModel.gname" [(ngModel)]="groupModel.gname"></p>
+    <div class="buttons">
+      <button type="button" (click)="cancelAddGroup()">Cancel</button>
+      <button class="addbutton" type="button" (click)="addGroup()">Add</button>
+    </div>
+  </form>
+</div>

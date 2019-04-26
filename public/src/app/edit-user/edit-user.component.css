@@ -1,0 +1,29 @@
+.container {
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.editbutton {
+    margin-left: 5px;
+}
+button {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+button:hover {
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer; 
+}
+.buttons {
+    margin-top: 10px;
+    display: block;
+}
+.error {
+    color: red;
+}

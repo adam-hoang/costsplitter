@@ -1,0 +1,50 @@
+<div class='container'>
+  <h1>{{group.gname}}</h1>
+  <hr>
+  <div>
+    <h2>{{user.name}}</h2>
+    <button class="editBtn" (click)="showEditUser()">Edit Name</button>
+
+    <div *ngIf="showDetails == false" class="container">
+      <p class="eventDetails"><b>Total Cost: $</b>{{userTotalCost}}</p>
+      <p class="eventDetails"><b>Total Paid: $</b>{{userPaid}}</p>
+      <p *ngIf="userBalance < 0" class="eventDetails"><b>Total Balance: </b><span class="red">-${{userBalance*-1}}</span></p>
+      <p *ngIf="userBalance >= 0" class="eventDetails"><b>Total Balance: </b><span class="green">+${{userBalance}}</span></p>
+      <button *ngIf="showDetails == false" class="showbutton" (click)="showDetailsButton()">Show Details</button>
+    </div>
+
+    <!-- LIST OF EVENTS USER IS PARTICPATING IN -->
+    <div *ngIf="showDetails == true" class='container'>
+      <table>
+        <thead>
+          <th>Event</th>
+          <th>Cost</th>
+          <th>Paid</th>
+          <th>Balance</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of userInformation">
+            <td>{{x.title}}</td>
+            <td>${{x.split}}</td>
+            <td>${{x.paid}}</td>
+            <td *ngIf="x.balance < 0" class="red">-${{x.balance*-1}}</td>
+            <td *ngIf="x.balance >= 0" class="green">+${{x.balance}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <table>
+        <tbody>
+          <tr>
+            <td>TOTAL</td>
+            <td>${{userTotalCost}}</td>
+            <td>${{userPaid}}</td>
+            <td *ngIf="userBalance < 0" class="red">-${{userBalance*-1}}</td>
+            <td *ngIf="userBalance >= 0" class="green">+${{userBalance}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button *ngIf="showDetails == true" class="hidebutton" (click)="hideDetailsButton()">Hide Details</button>
+    </div>
+  </div>
+</div>

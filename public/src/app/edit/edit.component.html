@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Edit Group</h2>
+  <p *ngIf="gnameError" class="error">{{gnameError}}</p>
+  <form>
+    <p>Group Name: &nbsp;&nbsp;<input type="text" name="editGroup.gname" [(ngModel)]="editGroup.gname" placeholder="Name"/></p>      
+    <div class="buttons">
+      <button (click)="cancelEditGroup()" type="button">Cancel</button>
+      <button class="editbutton" (click)="updateGroup(editGroup._id, editGroup)" type="button">Edit</button>
+    </div>
+  </form>
+</div>

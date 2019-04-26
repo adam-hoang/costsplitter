@@ -1,0 +1,46 @@
+.container {
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+table {
+    margin: auto;
+}
+button {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+.addbutton, .editbtn {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 130px;
+    border-radius: 5px;
+}
+.addbutton {
+    margin-top: 10px;
+}
+p {
+    margin:0px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+.eventDetails {
+    text-align: center;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+button:hover {
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer; 
+}

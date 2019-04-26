@@ -1,0 +1,33 @@
+<div class='container'>
+  <h1>{{group.gname}}</h1>
+  <hr>
+  <div>
+    <h2>{{event.title}}</h2>
+    <p class="eventDetails"><b>Total: $</b>{{event.total}}</p>
+    <p class="eventDetails"><b>Split Per Person: $</b>{{event.split}}</p>
+    <p class="eventDetails"><b>Note: </b>{{event.note}}</p>
+    <p class="eventDetails"><b>Date: </b>{{prettyDate}}</p>
+    <button class="editbtn" (click)="showEdit()">Edit Event Details</button>
+    <div class='container'>
+      <h3>Participants</h3>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Paid</th>
+          <th>Balance</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of event.participants">
+            <td>{{x.name}}</td>
+            <td>${{x.paid}}</td>
+            <td *ngIf="x.balance < 0" class="red">-${{x.balance*-1}}</td>
+            <td *ngIf="x.balance >= 0"  class="green">+${{x.balance}}</td>
+            <td><button (click)="deletePart(x)" class="addButton">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button *ngIf="noAvailUsers == false" class="addbutton" (click)="showAdd()">Add Participant</button>
+    </div>
+  </div>
+</div>

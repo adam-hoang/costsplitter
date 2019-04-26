@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Add Particpant</h3>
+  <p *ngIf="paidError" class="error">{{paidError}}</p>
+  <div class="leftForm">
+    <p>Paid: </p>
+    <p>Name: </p>
+  </div>
+  <div class="rightForm">
+    <form>
+      <input placeholder="Paid" type="number" name="partModel.paid" [(ngModel)]="partModel.paid">
+      <select type="text" name="partModel._id" [(ngModel)]="partModel._id">
+        <option *ngFor="let y of availableUsers" value="{{y._id}}">{{y.name}}</option>
+      </select>
+    </form>
+  </div>
+  <div>
+    <button type="button" (click)="cancelAdd()">Cancel</button>
+    <button class="addbutton" type="button" (click)="addPart()">Add</button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+
+.container {
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+button {
+    background-color: teal;
+    color:white;
+    padding: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+.addbutton {
+    margin-left: 5px;
+}
+button:hover {
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer; 
+}
+input {
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+select {
+    width: 130px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+p {
+    margin: 5px;
+}
+.error {
+    color: red;
+}

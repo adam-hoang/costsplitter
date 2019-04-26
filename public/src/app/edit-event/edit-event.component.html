@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>Edit Event</h3>
+  <div>
+    <p class="error" *ngFor="let x of errors">{{x}}</p>
+  </div>
+  <form>
+    <p>Event Title: <input type="text" name="editEvent.title" [(ngModel)]="editEvent.title" placeholder="Title"/></p>
+    <p>Event Total: <input type="number" name="editEvent.total" [(ngModel)]="editEvent.total" placeholder="Total"/></p>
+    <p>Event Note: <input type="text" name="editEvent.note" [(ngModel)]="editEvent.note" placeholder="Note"/></p>
+    <p>Event Date: <input type="date" name="editEvent.date" [(ngModel)]="editEvent.date" placeholder="Date"/></p>
+    <div class="buttonsDiv">
+      <button (click)="cancelEditEvent()" type="button">Cancel</button>
+      <button class="editbutton" (click)="updateEvent(editEvent._id, editEvent)" type="button">Edit</button>
+    </div>
+  </form>
+</div>

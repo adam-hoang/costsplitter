@@ -1,0 +1,23 @@
+<div class='container'>
+  <h3>Add Event</h3>
+  <div>
+    <p *ngIf="errors.title" class="error">{{errors.title.message}}</p>
+    <p *ngIf="errors.total" class="error">{{errors.total.message}}</p>
+    <p *ngIf="errors.date" class="error">{{errors.date.message}}</p>
+    <p *ngIf="paidError" class="error">{{paidError}}</p>
+  </div>
+  <form>
+    <p>Event Title: &nbsp;&nbsp; <input placeholder="Event Title" type="text" name="eventModel.title" [(ngModel)]="eventModel.title"></p>
+    <p>Event Total: &nbsp;&nbsp; <input placeholder="Total Cost" type="number" name="eventModel.total" [(ngModel)]="eventModel.total"></p>
+    <p>Event Date: &nbsp;&nbsp; <input placeholder="Date" onfocus="(this.type='date')" type="text" name="eventModel.date" [(ngModel)]="eventModel.date"></p>
+    <p>Event Note: &nbsp;&nbsp; <input placeholder="Note" type="text" name="eventModel.note" [(ngModel)]="eventModel.note"></p>
+    <p>Paid Amnt:&nbsp;&nbsp; <input placeholder="Paid Amount" type="number" name="participantModel.paid" [(ngModel)]="participantModel.paid">
+    <p>1st Payer: &nbsp;&nbsp;
+      <select type="text" name="participantID" [(ngModel)]="participantID">
+        <option *ngFor="let x of group.users" value="{{x._id}}">{{x.name}}</option>
+      </select>
+    </p>  
+    <button type="button" (click)="cancelAddEvent()">Cancel</button>
+    <button class="addbutton" (click)="addEvent()">Add</button>
+  </form>
+</div>
