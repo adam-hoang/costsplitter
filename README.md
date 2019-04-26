@@ -1,6 +1,6 @@
 # CostSplitter
 
-<a href="13.59.143.72">Click for Demo</a>
+<a href="http://13.59.143.72">Click for Demo</a>
 
 - This app enables you to split the cost of trips with your friends.
 - You can create groups and add events and users.
